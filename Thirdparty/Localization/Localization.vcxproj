@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{AAE7D03E-6F2E-4DD4-9E22-EEF8B0C79017}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Localization</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;WIN32;_WINDOWS;TW_STATIC;TW_NO_LIB_PRAGMA;TW_NO_DIRECT3D;GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <OpenMPSupport>true</OpenMPSupport>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\External\cuda_9.2\include\;$(ProjectDir)..\..\..\..\External\boost_1_63_0\;$(ProjectDir)..\..\..\..\External\glfw-3.1.2\include\GLFW\;$(ProjectDir)..\..\..\..\External\glm-0.9.7.1\;$(ProjectDir)..\..\..\..\External\glew-1.13.0\include\;$(ProjectDir)..\..\..\..\External\shaders\;$(ProjectDir)..\..\..\..\External\opencv-3.4.0_CUDA\build\install\include;$(ProjectDir)..\CUDA_functions\;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\External\boost_1_63_0\stage\lib64\;$(ProjectDir)..\..\External\opencv\build\x64\vc14\lib\;$(ProjectDir)..\..\External\cuda_9.2\lib\x64\;$(SolutionDir)x64\Release\;$(ProjectDir)..\..\External\glew-1.13.0\;$(ProjectDir)..\..\External\glfw-3.1.2\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opencv_world320.lib;glu32.lib;opengl32.lib;GLEW_1130.lib;glfw3.lib;CUDA_functions.lib;cublas.lib;cublas_device.lib;cuda.lib;cudadevrt.lib;cudart.lib;cudart_static.lib;cufft.lib;cufftw.lib;curand.lib;cusolver.lib;cusparse.lib;nppc.lib;nppial.lib;nppicc.lib;nppicom.lib;nppidei.lib;nppif.lib;nppig.lib;nppim.lib;nppist.lib;nppisu.lib;nppitc.lib;npps.lib;nvblas.lib;nvcuvid.lib;nvgraph.lib;nvml.lib;nvrtc.lib;OpenCL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="image.cpp" />
+    <ClCompile Include="ioData.cpp" />
+    <ClCompile Include="nmiSearchKernel.cpp" />
+    <ClCompile Include="objloader.cpp" />
+    <ClCompile Include="localization.cpp" />
+    <ClCompile Include="helperFunctions.cpp" />
+    <ClCompile Include="shader.cpp" />
+    <ClCompile Include="texture.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cameraSettings.hpp" />
+    <ClInclude Include="helperFunctions.hpp" />
+    <ClInclude Include="image.hpp" />
+    <ClInclude Include="ioData.hpp" />
+    <ClInclude Include="localization.hpp" />
+    <ClInclude Include="nmiSearchKernel.hpp" />
+    <ClInclude Include="allProperties.hpp" />
+    <ClInclude Include="objloader.hpp" />
+    <ClInclude Include="rendering.hpp" />
+    <ClInclude Include="shader.hpp" />
+    <ClInclude Include="texture.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CUDA_Functions\CUDA_Functions.vcxproj">
+      <Project>{303ee529-3f2e-4c6f-9709-866af537f009}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="$(ProjectDir)..\src\System.cc" />
+    <ClCompile Include="$(ProjectDir)..\src\Tracking.cc" />
+    <ClCompile Include="$(ProjectDir)..\src\LocalMapping.cc" />
+    <ClCompile Include="$(ProjectDir)..\src\LoopClosing.cc" />
+    <ClCompile Include="$(ProjectDir)..\src\ORBextractor.cc" />
+    <ClCompile Include="$(ProjectDir)..\src\ORBmatcher.cc" />
+    <ClCompile Include="$(ProjectDir)..\src\FrameDrawer.cc" />
+    <ClCompile Include="$(ProjectDir)..\src\Converter.cc" />
+    <ClCompile Include="$(ProjectDir)..\src\MapPoint.cc" />
+    <ClCompile Include="$(ProjectDir)..\src\KeyFrame.cc" />
+    <ClCompile Include="$(ProjectDir)..\src\Map.cc" />
+    <ClCompile Include="$(ProjectDir)..\src\MapDrawer.cc" />
+    <ClCompile Include="$(ProjectDir)..\src\PnPsolver.cc" />
+    <ClCompile Include="$(ProjectDir)..\src\Frame.cc" />
+    <ClCompile Include="$(ProjectDir)..\src\KeyFrameDatabase.cc" />
+    <ClCompile Include="$(ProjectDir)..\src\Sim3Solver.cc" />
+    <ClCompile Include="$(ProjectDir)..\src\Initializer.cc" />
+    <ClCompile Include="$(ProjectDir)..\src\Viewer.cc" />
+    <ClCompile Include="..\src\Optimizer.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{23D78905-B8A2-3AF7-A88F-B42C52759F0C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\MapPoint.h" />
+    <ClInclude Include="..\include\Optimizer.h" />
+    <ClInclude Include="..\include\Tracking.h" />
+    <ClInclude Include="..\include\Frame.h" />
+    <ClInclude Include="..\include\KeyFrame.h" />
+    <ClInclude Include="..\include\Map.h" />
+    <ClInclude Include="..\include\Initializer.h" />
+    <ClInclude Include="..\include\ORBmatcher.h" />
+    <ClInclude Include="..\include\FrameDrawer.h" />
+    <ClInclude Include="..\include\MapDrawer.h" />
+    <ClInclude Include="..\include\System.h" />
+    <ClInclude Include="..\include\Viewer.h" />
+    <ClInclude Include="..\include\LoopClosing.h" />
+    <ClInclude Include="..\include\Converter.h" />
+    <ClInclude Include="..\include\KeyFrameDatabase.h" />
+    <ClInclude Include="..\include\LocalMapping.h" />
+    <ClInclude Include="..\include\ORBextractor.h" />
+    <ClInclude Include="..\include\PnPsolver.h" />
+    <ClInclude Include="..\include\Sim3Solver.h" />
+  </ItemGroup>
+</Project>

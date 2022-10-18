@@ -1,0 +1,97 @@
+%YAML:1.0
+
+#--------------------------------------------------------------------------------------------
+# Camera Parameters. Adjust them!
+#--------------------------------------------------------------------------------------------
+
+# Camera calibration and distortion parameters (OpenCV) 
+Camera.fx: 435.04593205
+Camera.fy: 435.04593205
+Camera.cx: 475.55781765
+Camera.cy: 274.7487729
+
+Camera.k1: 0.0
+Camera.k2: 0.0
+Camera.p1: 0.0
+Camera.p2: 0.0
+
+# Camera frames per second 
+Camera.fps: 30.0
+
+# Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
+Camera.RGB: 1
+Camera.Height: 540
+Camera.Width: 960
+#--------------------------------------------------------------------------------------------
+# ORB Parameters
+#--------------------------------------------------------------------------------------------
+
+# ORB Extractor: Number of features per image
+ORBextractor.nFeatures: 2000
+
+# ORB Extractor: Scale factor between levels in the scale pyramid 	
+ORBextractor.scaleFactor: 1.2
+
+# ORB Extractor: Number of levels in the scale pyramid	
+ORBextractor.nLevels: 8
+
+# ORB Extractor: Fast threshold
+# Image is divided in a grid. At each cell FAST are extracted imposing a minimum response.
+# Firstly we impose iniThFAST. If no corners are detected we impose a lower value minThFAST
+# You can lower these values if your images have low contrast			
+ORBextractor.iniThFAST: 20
+ORBextractor.minThFAST: 7
+
+#--------------------------------------------------------------------------------------------
+# Viewer Parameters
+#--------------------------------------------------------------------------------------------
+Viewer.KeyFrameSize: 0.1
+Viewer.KeyFrameLineWidth: 1
+Viewer.GraphLineWidth: 1
+Viewer.PointSize:2
+Viewer.CameraSize: 0.15
+Viewer.CameraLineWidth: 2
+Viewer.ViewpointX: 0
+Viewer.ViewpointY: -10
+Viewer.ViewpointZ: -0.1
+Viewer.ViewpointF: 2000
+
+#--------------------------------------------------------------------------------------------
+# NMI Parameters
+#--------------------------------------------------------------------------------------------
+#picture 20513 (numbered from 1 as the filenames)
+NMI.Init1: !!opencv-matrix
+    rows: 4
+    cols: 4
+    dt: f
+    data: [-0.7406, -0.6719, -0.0098, 16.4048, -0.0792, 0.1017, -0.9917, -42.1920, 0.6673, -0.7337, -0.1285, 292.5767, 0.0000, 0.0000, 0.0000, 1.0000]
+    
+NMI.Init2: !!opencv-matrix
+    rows: 4
+    cols: 4
+    dt: f
+    data: [-0.7406, -0.6719, -0.0098, 16.4048, -0.0792, 0.1017, -0.9917, -42.1920, 0.6673, -0.7337, -0.1285, 292.5767, 0.0000, 0.0000, 0.0000, 1.0000]
+
+NMI.Offset: 10
+NMI.Treshold: 0.07
+
+NMI.SynthNumX:3
+NMI.SynthNumY:3
+NMI.SynthNumZ:3
+NMI.WarpNumX: 3
+NMI.WarpNumY: 3
+NMI.WarpNumZ: 3
+NMI.SynthStepX: 0.2
+NMI.SynthStepY: 0.2
+NMI.SynthStepZ: 0.5
+NMI.WarpStepX: 0.02
+NMI.WarpStepY: 0.02
+NMI.WarpStepZ: 0.05
+
+NMI.Render.PointSize: 3.0
+NMI.Render.NearPlane: 5.0
+NMI.Render.FarPlane: 30.0
+NMI.Render.Object: "D:/Users/Sanya/Documents/SZTAKI/ORB_DATA/AGZ/pix4d_test10_elevation/test10/2_densification/3d_mesh/test10_simplified_3d_mesh.obj"
+NMI.Render.Texture: "D:/Users/Sanya/Documents/SZTAKI/ORB_DATA/AGZ/pix4d_test10_elevation/test10/2_densification/3d_mesh/test10_texture.bmp"
+NMI.Render.Cloud: "D:/Users/Sanya/Documents/SZTAKI/ORB_DATA/AGZ/pix4d_test10_elevation/test10/2_densification/point_cloud/test10_group1_densified_point_cloud.xyz"
+NMI.Render.Offset: "D:/Users/Sanya/Documents/SZTAKI/ORB_DATA/AGZ/pix4d_test10_elevation/test10/2_densification/point_cloud/test6_init_offset.xyz"

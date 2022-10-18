@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Project files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="helperFunctions.cpp">
+      <Filter>Project files</Filter>
+    </ClCompile>
+    <ClCompile Include="localization.cpp">
+      <Filter>Project files</Filter>
+    </ClCompile>
+    <ClCompile Include="image.cpp">
+      <Filter>Project files</Filter>
+    </ClCompile>
+    <ClCompile Include="nmiSearchKernel.cpp">
+      <Filter>Project files</Filter>
+    </ClCompile>
+    <ClCompile Include="ioData.cpp">
+      <Filter>Project files</Filter>
+    </ClCompile>
+    <ClCompile Include="objloader.cpp">
+      <Filter>Project files</Filter>
+    </ClCompile>
+    <ClCompile Include="texture.cpp">
+      <Filter>Project files</Filter>
+    </ClCompile>
+    <ClCompile Include="shader.cpp">
+      <Filter>Project files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="helperFunctions.hpp">
+      <Filter>Project files</Filter>
+    </ClInclude>
+    <ClInclude Include="localization.hpp">
+      <Filter>Project files</Filter>
+    </ClInclude>
+    <ClInclude Include="allProperties.hpp">
+      <Filter>Project files</Filter>
+    </ClInclude>
+    <ClInclude Include="cameraSettings.hpp">
+      <Filter>Project files</Filter>
+    </ClInclude>
+    <ClInclude Include="image.hpp">
+      <Filter>Project files</Filter>
+    </ClInclude>
+    <ClInclude Include="rendering.hpp">
+      <Filter>Project files</Filter>
+    </ClInclude>
+    <ClInclude Include="nmiSearchKernel.hpp">
+      <Filter>Project files</Filter>
+    </ClInclude>
+    <ClInclude Include="ioData.hpp">
+      <Filter>Project files</Filter>
+    </ClInclude>
+    <ClInclude Include="objloader.hpp">
+      <Filter>Project files</Filter>
+    </ClInclude>
+    <ClInclude Include="texture.hpp">
+      <Filter>Project files</Filter>
+    </ClInclude>
+    <ClInclude Include="shader.hpp">
+      <Filter>Project files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

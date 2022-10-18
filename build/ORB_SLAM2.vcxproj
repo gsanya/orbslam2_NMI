@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{01494DEE-57ED-350E-977D-3E536C9061E1}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ORB_SLAM2</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)..\build\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ORB_SLAM2.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ORB_SLAM2</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\Thirdparty\CUDA_Functions\;$(ProjectDir)..\Thirdparty\Localization;$(ProjectDir)..\include;$(ProjectDir)..\;$(ProjectDir)..\..\..\External\cuda_9.2\samples\inc\;$(ProjectDir)..\..\..\External\cuda_9.2\include\;$(ProjectDir)..\..\..\External\eigen;$(ProjectDir)..\..\..\External\Pangolin\include;$(ProjectDir)..\..\..\External\Pangolin\build\src\include;$(ProjectDir)..\..\..\External\opencv-3.4.0_CUDA\build\install\include;$(ProjectDir)..\..\..\External\opencv-3.4.0_CUDA\build\install\include\opencv;$(ProjectDir)..\..\..\External\glm-0.9.7.1;$(ProjectDir)..\..\..\External\glfw-3.1.2\include\GLFW;$(ProjectDir)..\..\..\External\glew-1.13.0\include\;$(ProjectDir)..\..\..\External\DBoW2\DBoW2;$(ProjectDir)..\..\..\External\DBoW2\DUtils\;$(ProjectDir)..\..\..\External\boost_1_63_0\;$(ProjectDir)..\Thirdparty\g2o\g2o\solvers\;$(ProjectDir)..\Thirdparty\g2o\g2o\core\;$(ProjectDir)..\Thirdparty\g2o\g2o\types\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -bigobj</AdditionalOptions>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <CppLanguageStandard>c++11</CppLanguageStandard>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>NOMINMAX;NDEBUG;WIN32;_WINDOWS;COMPILEDWITHC11;CMAKE_INTDIR="Release";ORB_SLAM2_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;COMPILEDWITHC11;CMAKE_INTDIR=\"Release\";ORB_SLAM2_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..;$(ProjectDir)..\include;$(ProjectDir)..\Thirdparty\eigen;$(ProjectDir)..\Thirdparty\opencv\build\include;$(ProjectDir)..\Thirdparty\opencv\build\include\opencv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(ProjectDir)..;$(ProjectDir)..\include;$(ProjectDir)..\Thirdparty\eigen;$(ProjectDir)..\Thirdparty\opencv\build\include;$(ProjectDir)..\Thirdparty\opencv\build\include\opencv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\Thirdparty\opencv\build\x64\vc14\lib\opencv_world340.lib;..\Thirdparty\opencv\build\x64\vc14\lib\opencv_world340.lib;..\Thirdparty\opencv\build\x64\vc14\lib\opencv_world340.lib;..\Thirdparty\opencv\build\x64\vc14\lib\opencv_world340.lib;..\Thirdparty\opencv\build\x64\vc14\lib\opencv_world340.lib;..\Thirdparty\opencv\build\x64\vc14\lib\opencv_world340.lib;..\Thirdparty\opencv\build\x64\vc14\lib\opencv_world340.lib;..\Thirdparty\opencv\build\x64\vc14\lib\opencv_world340.lib;..\Thirdparty\opencv\build\x64\vc14\lib\opencv_world340.lib;..\Thirdparty\opencv\build\x64\vc14\lib\opencv_world340.lib;..\Thirdparty\opencv\build\x64\vc14\lib\opencv_world340.lib;..\Thirdparty\opencv\build\x64\vc14\lib\opencv_world340.lib;..\Thirdparty\opencv\build\x64\vc14\lib\opencv_world340.lib;..\Thirdparty\opencv\build\x64\vc14\lib\opencv_world340.lib;..\Thirdparty\opencv\build\x64\vc14\lib\opencv_world340.lib;..\Thirdparty\opencv\build\x64\vc14\lib\opencv_world340.lib;..\Thirdparty\opencv\build\x64\vc14\lib\opencv_world340.lib;..\Thirdparty\opencv\build\x64\vc14\lib\opencv_world340.lib;..\Thirdparty\DBoW2\lib\Release\DBoW2.lib;..\Thirdparty\g2o\build\Release\g2o.lib;opengl32.lib;glu32.lib;mf.lib;mfplat.lib;mfreadwrite.lib;mfuuid.lib;strmiids.lib;;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\Thirdparty\opencv\build\x64\vc14\lib\opencv_world340.lib;..\Thirdparty\opencv\build\x64\vc14\lib\opencv_world340.lib;..\Thirdparty\opencv\build\x64\vc14\lib\opencv_world340.lib;..\Thirdparty\opencv\build\x64\vc14\lib\opencv_world340.lib;..\Thirdparty\opencv\build\x64\vc14\lib\opencv_world340.lib;..\Thirdparty\opencv\build\x64\vc14\lib\opencv_world340.lib;..\Thirdparty\opencv\build\x64\vc14\lib\opencv_world340.lib;..\Thirdparty\opencv\build\x64\vc14\lib\opencv_world340.lib;..\Thirdparty\opencv\build\x64\vc14\lib\opencv_world340.lib;..\Thirdparty\opencv\build\x64\vc14\lib\opencv_world340.lib;..\Thirdparty\opencv\build\x64\vc14\lib\opencv_world340.lib;..\Thirdparty\opencv\build\x64\vc14\lib\opencv_world340.lib;..\Thirdparty\opencv\build\x64\vc14\lib\opencv_world340.lib;..\Thirdparty\opencv\build\x64\vc14\lib\opencv_world340.lib;..\Thirdparty\opencv\build\x64\vc14\lib\opencv_world340.lib;..\Thirdparty\opencv\build\x64\vc14\lib\opencv_world340.lib;..\Thirdparty\opencv\build\x64\vc14\lib\opencv_world340.lib;..\Thirdparty\opencv\build\x64\vc14\lib\opencv_world340.lib;..\Thirdparty\DBoW2\lib\Release\DBoW2.lib;..\Thirdparty\g2o\build\Release\g2o.lib;opengl32.lib;glu32.lib;mf.lib;mfplat.lib;mfreadwrite.lib;mfuuid.lib;strmiids.lib;;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(ProjectDir)../build/Release/ORB_SLAM2.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(ProjectDir)../build/Release/ORB_SLAM2.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="$(ProjectDir)..\src\System.cc" />
+    <ClCompile Include="$(ProjectDir)..\src\Tracking.cc" />
+    <ClCompile Include="$(ProjectDir)..\src\LocalMapping.cc" />
+    <ClCompile Include="$(ProjectDir)..\src\LoopClosing.cc" />
+    <ClCompile Include="$(ProjectDir)..\src\ORBextractor.cc" />
+    <ClCompile Include="$(ProjectDir)..\src\ORBmatcher.cc" />
+    <ClCompile Include="$(ProjectDir)..\src\FrameDrawer.cc" />
+    <ClCompile Include="$(ProjectDir)..\src\Converter.cc" />
+    <ClCompile Include="$(ProjectDir)..\src\MapPoint.cc" />
+    <ClCompile Include="$(ProjectDir)..\src\KeyFrame.cc" />
+    <ClCompile Include="$(ProjectDir)..\src\Map.cc" />
+    <ClCompile Include="$(ProjectDir)..\src\MapDrawer.cc" />
+    <ClCompile Include="$(ProjectDir)..\src\PnPsolver.cc" />
+    <ClCompile Include="$(ProjectDir)..\src\Frame.cc" />
+    <ClCompile Include="$(ProjectDir)..\src\KeyFrameDatabase.cc" />
+    <ClCompile Include="$(ProjectDir)..\src\Sim3Solver.cc" />
+    <ClCompile Include="$(ProjectDir)..\src\Initializer.cc" />
+    <ClCompile Include="$(ProjectDir)..\src\Viewer.cc" />
+    <ClCompile Include="..\src\Optimizer.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Thirdparty\CUDA_Functions\CUDA_Functions.vcxproj">
+      <Project>{303ee529-3f2e-4c6f-9709-866af537f009}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Thirdparty\g2o\build\g2o.vcxproj">
+      <Project>{274f7761-01ba-3a33-ae2a-82398e20f12c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Thirdparty\Localization\Localization.vcxproj">
+      <Project>{aae7d03e-6f2e-4dd4-9e22-eef8b0c79017}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\Converter.h" />
+    <ClInclude Include="..\include\Frame.h" />
+    <ClInclude Include="..\include\FrameDrawer.h" />
+    <ClInclude Include="..\include\Initializer.h" />
+    <ClInclude Include="..\include\KeyFrame.h" />
+    <ClInclude Include="..\include\KeyFrameDatabase.h" />
+    <ClInclude Include="..\include\LocalMapping.h" />
+    <ClInclude Include="..\include\LoopClosing.h" />
+    <ClInclude Include="..\include\Map.h" />
+    <ClInclude Include="..\include\MapDrawer.h" />
+    <ClInclude Include="..\include\MapPoint.h" />
+    <ClInclude Include="..\include\Optimizer.h" />
+    <ClInclude Include="..\include\ORBextractor.h" />
+    <ClInclude Include="..\include\ORBmatcher.h" />
+    <ClInclude Include="..\include\PnPsolver.h" />
+    <ClInclude Include="..\include\Sim3Solver.h" />
+    <ClInclude Include="..\include\System.h" />
+    <ClInclude Include="..\include\Tracking.h" />
+    <ClInclude Include="..\include\Viewer.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

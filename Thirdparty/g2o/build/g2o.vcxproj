@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{274F7761-01BA-3A33-AE2A-82398E20F12C}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>g2o</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">g2o</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\g20\core;$(ProjectDir)..\g20\types;$(ProjectDir)..\g20\stuff;$(ProjectDir)..\..\..\..\..\External\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -O3 -march=native</AdditionalOptions>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>EIGEN_DONT_PARALLELIZE;_WINDOWS;WINDOWS;WIN32;NDEBUG;CMAKE_INTDIR="Release";g2o_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\";g2o_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\g20\core;$(ProjectDir)..\g20\types;$(ProjectDir)..\g20\stuff;$(ProjectDir)..\..\..\..\..\External\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\g20\core;$(ProjectDir)..\g20\types;$(ProjectDir)..\g20\stuff;$(ProjectDir)..\..\..\..\..\External\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(ProjectDir)../bin/Release/g2o.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(ProjectDir)Release/g2o.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="$(ProjectDir)..\g2o\types\types_sba.h" />
+    <ClInclude Include="$(ProjectDir)..\g2o\types\types_six_dof_expmap.h" />
+    <ClCompile Include="$(ProjectDir)..\g2o\types\types_sba.cpp" />
+    <ClCompile Include="$(ProjectDir)..\g2o\types\types_six_dof_expmap.cpp" />
+    <ClCompile Include="$(ProjectDir)..\g2o\types\types_seven_dof_expmap.cpp" />
+    <ClInclude Include="$(ProjectDir)..\g2o\types\types_seven_dof_expmap.h" />
+    <ClInclude Include="$(ProjectDir)..\g2o\types\se3quat.h" />
+    <ClInclude Include="$(ProjectDir)..\g2o\types\se3_ops.h" />
+    <ClInclude Include="$(ProjectDir)..\g2o\types\se3_ops.hpp" />
+    <ClInclude Include="$(ProjectDir)..\g2o\core\base_edge.h" />
+    <ClInclude Include="$(ProjectDir)..\g2o\core\base_binary_edge.h" />
+    <ClCompile Include="$(ProjectDir)..\g2o\core\hyper_graph_action.cpp" />
+    <ClInclude Include="$(ProjectDir)..\g2o\core\base_binary_edge.hpp" />
+    <ClInclude Include="$(ProjectDir)..\g2o\core\hyper_graph_action.h" />
+    <ClInclude Include="$(ProjectDir)..\g2o\core\base_multi_edge.h" />
+    <ClCompile Include="$(ProjectDir)..\g2o\core\hyper_graph.cpp" />
+    <ClInclude Include="$(ProjectDir)..\g2o\core\base_multi_edge.hpp" />
+    <ClInclude Include="$(ProjectDir)..\g2o\core\hyper_graph.h" />
+    <ClInclude Include="$(ProjectDir)..\g2o\core\base_unary_edge.h" />
+    <ClInclude Include="$(ProjectDir)..\g2o\core\linear_solver.h" />
+    <ClInclude Include="$(ProjectDir)..\g2o\core\base_unary_edge.hpp" />
+    <ClCompile Include="$(ProjectDir)..\g2o\core\marginal_covariance_cholesky.cpp" />
+    <ClInclude Include="$(ProjectDir)..\g2o\core\base_vertex.h" />
+    <ClInclude Include="$(ProjectDir)..\g2o\core\marginal_covariance_cholesky.h" />
+    <ClInclude Include="$(ProjectDir)..\g2o\core\base_vertex.hpp" />
+    <ClCompile Include="$(ProjectDir)..\g2o\core\matrix_structure.cpp" />
+    <ClCompile Include="$(ProjectDir)..\g2o\core\batch_stats.cpp" />
+    <ClInclude Include="$(ProjectDir)..\g2o\core\matrix_structure.h" />
+    <ClInclude Include="$(ProjectDir)..\g2o\core\batch_stats.h" />
+    <ClInclude Include="$(ProjectDir)..\g2o\core\openmp_mutex.h" />
+    <ClInclude Include="$(ProjectDir)..\g2o\core\block_solver.h" />
+    <ClInclude Include="$(ProjectDir)..\g2o\core\block_solver.hpp" />
+    <ClCompile Include="$(ProjectDir)..\g2o\core\parameter.cpp" />
+    <ClInclude Include="$(ProjectDir)..\g2o\core\parameter.h" />
+    <ClCompile Include="$(ProjectDir)..\g2o\core\cache.cpp" />
+    <ClInclude Include="$(ProjectDir)..\g2o\core\cache.h" />
+    <ClCompile Include="$(ProjectDir)..\g2o\core\optimizable_graph.cpp" />
+    <ClInclude Include="$(ProjectDir)..\g2o\core\optimizable_graph.h" />
+    <ClCompile Include="$(ProjectDir)..\g2o\core\solver.cpp" />
+    <ClInclude Include="$(ProjectDir)..\g2o\core\solver.h" />
+    <ClInclude Include="$(ProjectDir)..\g2o\core\creators.h" />
+    <ClCompile Include="$(ProjectDir)..\g2o\core\optimization_algorithm_factory.cpp" />
+    <ClCompile Include="$(ProjectDir)..\g2o\core\estimate_propagator.cpp" />
+    <ClInclude Include="$(ProjectDir)..\g2o\core\optimization_algorithm_factory.h" />
+    <ClInclude Include="$(ProjectDir)..\g2o\core\estimate_propagator.h" />
+    <ClCompile Include="$(ProjectDir)..\g2o\core\factory.cpp" />
+    <ClInclude Include="$(ProjectDir)..\g2o\core\optimization_algorithm_property.h" />
+    <ClInclude Include="$(ProjectDir)..\g2o\core\factory.h" />
+    <ClInclude Include="$(ProjectDir)..\g2o\core\sparse_block_matrix.h" />
+    <ClCompile Include="$(ProjectDir)..\g2o\core\sparse_optimizer.cpp" />
+    <ClInclude Include="$(ProjectDir)..\g2o\core\sparse_block_matrix.hpp" />
+    <ClInclude Include="$(ProjectDir)..\g2o\core\sparse_optimizer.h" />
+    <ClCompile Include="$(ProjectDir)..\g2o\core\hyper_dijkstra.cpp" />
+    <ClInclude Include="$(ProjectDir)..\g2o\core\hyper_dijkstra.h" />
+    <ClCompile Include="$(ProjectDir)..\g2o\core\parameter_container.cpp" />
+    <ClInclude Include="$(ProjectDir)..\g2o\core\parameter_container.h" />
+    <ClCompile Include="$(ProjectDir)..\g2o\core\optimization_algorithm.cpp" />
+    <ClInclude Include="$(ProjectDir)..\g2o\core\optimization_algorithm.h" />
+    <ClCompile Include="$(ProjectDir)..\g2o\core\optimization_algorithm_with_hessian.cpp" />
+    <ClInclude Include="$(ProjectDir)..\g2o\core\optimization_algorithm_with_hessian.h" />
+    <ClCompile Include="$(ProjectDir)..\g2o\core\optimization_algorithm_levenberg.cpp" />
+    <ClInclude Include="$(ProjectDir)..\g2o\core\optimization_algorithm_levenberg.h" />
+    <ClCompile Include="$(ProjectDir)..\g2o\core\jacobian_workspace.cpp" />
+    <ClInclude Include="$(ProjectDir)..\g2o\core\jacobian_workspace.h" />
+    <ClCompile Include="$(ProjectDir)..\g2o\core\robust_kernel.cpp" />
+    <ClInclude Include="$(ProjectDir)..\g2o\core\robust_kernel.h" />
+    <ClCompile Include="$(ProjectDir)..\g2o\core\robust_kernel_factory.cpp" />
+    <ClInclude Include="$(ProjectDir)..\g2o\core\robust_kernel_factory.h" />
+    <ClCompile Include="$(ProjectDir)..\g2o\core\robust_kernel_impl.cpp" />
+    <ClInclude Include="$(ProjectDir)..\g2o\core\robust_kernel_impl.h" />
+    <ClInclude Include="$(ProjectDir)..\g2o\stuff\string_tools.h" />
+    <ClInclude Include="$(ProjectDir)..\g2o\stuff\color_macros.h" />
+    <ClInclude Include="$(ProjectDir)..\g2o\stuff\macros.h" />
+    <ClCompile Include="$(ProjectDir)..\g2o\stuff\timeutil.cpp" />
+    <ClInclude Include="$(ProjectDir)..\g2o\stuff\misc.h" />
+    <ClInclude Include="$(ProjectDir)..\g2o\stuff\timeutil.h" />
+    <ClCompile Include="$(ProjectDir)..\g2o\stuff\os_specific.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="$(ProjectDir)..\g2o\stuff\os_specific.h" />
+    <ClCompile Include="$(ProjectDir)..\g2o\stuff\string_tools.cpp" />
+    <ClCompile Include="$(ProjectDir)..\g2o\stuff\property.cpp" />
+    <ClInclude Include="$(ProjectDir)..\g2o\stuff\property.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

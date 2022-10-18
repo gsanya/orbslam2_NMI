@@ -1,0 +1,34 @@
+The orbslam2_NMIlibrary is licensed under the new GNU license. 
+Note that this text refers only to the license for orbslam2_NMI itself, independent of its dependencies, which are separately licensed. 
+Building orbslam2_NMI with these dependencies may affect the resulting orbslam2_NMI license.
+
+This is a list of the used dependencies, but note, that most of those dependencies also build on other dependencies, and copyrighted algorithms.
+
+ORB-SLAM2 is licensed under GNU. The dependencies of ORB-SLAM2 are the following:
+
+* ORBextractor.cc. This is a modified version of orb.cpp of OpenCV library. The original code is BSD licensed.
+
+* PnPsolver.h, PnPsolver.cc. This is a modified version of the epnp.h and epnp.cc of Vincent Lepetit. This code can be found in popular BSD licensed computer vision libraries as OpenCV and OpenGV. The original code is FreeBSD.
+
+* Function ORBmatcher::DescriptorDistance in ORBmatcher.cc. The code is from: http://graphics.stanford.edu/~seander/bithacks.html#CountBitsSetParallel. The code is in the public domain.
+
+* All code in DBoW2 folder. This is a modified version of DBoW2 and DLib library. All files included are BSD licensed.
+
+* All code in g2o folder. This is a modified version of g2o. All files included are BSD licensed.
+
+* Pangolin (visualization and user interface). MIT license.
+
+* OpenCV. BSD license.
+
+* Eigen3. For versions greater than 3.1.1 is MPL2, earlier versions are LGPLv3.
+
+* ROS (Optional, only if you build Examples/ROS). BSD license. In the manifest.xml the only declared package dependencies are roscpp, tf, sensor_msgs, image_transport, cv_bridge, which are all BSD licensed.
+
+
+Boost 1.63.0 is licensed under BSL license. Find it here: <https://www.boost.org/users/license.html>.
+
+CUDA 9.2 is licensed under NVIDIA-s own license. Find it here: <https://docs.nvidia.com/cuda/eula/index.html>.
+
+GLEW is licensed under Modified BSD license, find it here: <https://github.com/nigels-com/glew/blob/master/LICENSE.txt>.
+
+GLFW is licensed under the zlib/libpng license, a BSD-like license that allows static linking with closed source software.
