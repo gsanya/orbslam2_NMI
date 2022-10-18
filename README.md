@@ -5,9 +5,9 @@ This is a windows build for orbslam2_NMI. We release the code under GNU licence,
 ## Additional material
 
 A long video demonstration of the results of the algorithm can be found here: \
-https://youtu.be/HLvOK9Uwykk \
+https://youtu.be/F0IrkscHfps \
 A shorter summary can be found here: \
-https://youtu.be/MHC67S7Vvt4
+https://youtu.be/InWSvnEo0Lk
 
 As a contribution we share the 3D mesh and 3D pointcloud calculated for the The Zurich Urban Micro Aerial Vehicle Dataset (ZU-MAV). \
 The dataset and the publication can be found here:\
